@@ -1,0 +1,39 @@
+.inner-head ul {
+   display: flex;
+   justify-content: end;
+   padding-right: 100px;
+   list-style: none;
+}
+
+.inner-head ul button {
+   margin: 40px;
+   border-radius: 10px;
+}
+
+.inner-head ul li:hover {
+   background: white;
+   cursor: pointer;
+}
+
+.inner-head ul button i {
+   font-size: 30px;
+}
+
+.main .row {
+   justify-content: center;
+   flex-direction: column;
+   width: 50%;
+   margin: 50px auto;
+   background-color: aliceblue;
+   padding: 20px;
+}
+
+input {
+   display: flex;
+}
+
+@media (max-width:576px) {
+   .main .row {
+      width: 100%;
+   }
+}
