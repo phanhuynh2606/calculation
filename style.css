@@ -14,9 +14,12 @@
    background: white;
    cursor: pointer;
 }
-
+.inner-head ul li button:active{
+   background: yellow;
+}
 .inner-head ul button i {
    font-size: 30px;
+   color: black;
 }
 
 .main .row {
@@ -31,7 +34,18 @@
 input {
    display: flex;
 }
-
+a:hover{
+   text-decoration: none;
+}
+#key{
+   visibility: hidden;
+   height: 0;
+   transition: all 0.5s ease-in-out 0;
+}
+#key.show{
+   visibility: visible;
+   height: 100%;
+}
 @media (max-width:576px) {
    .main .row {
       width: 100%;
