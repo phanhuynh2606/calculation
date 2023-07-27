@@ -18,7 +18,9 @@ var result = document.getElementById("result");
 start.addEventListener("click", function () {
   num1.value = getRndInteger(1, 10);
   num2.value = getRndInteger(1, 10);
+ if(document.querySelector('.show')!= null){
   showKey.click();
+ }
 });
 var check = document.getElementById("check");
 var opt = document.getElementById("opt");
