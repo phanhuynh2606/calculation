@@ -81,11 +81,5 @@ check.addEventListener("click", function () {
 showKey.addEventListener("click", function () {
   key.classList.toggle("show");
   key.innerHTML =
-    num1.value +
-    " " +
-    opt.value +
-    " " +
-    num2.value +
-    " = " +
-    calcultion(num1, num2);
+    num1.value +" " + opt.value + " " + num2.value + " = " + calcultion(num1, num2);
 });

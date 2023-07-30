@@ -1,17 +1,24 @@
 .inner-head ul {
+   width: 100%;
    display: flex;
-   justify-content: end;
-   padding-right: 100px;
+   justify-content: center;
    list-style: none;
+   padding: 0;
 }
-
+.inner-head{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 0;
+}
 .inner-head ul button {
-   margin: 40px;
    border-radius: 10px;
+   margin-right:20px ;
+ 
 }
-
-.inner-head ul li:hover {
-   background: white;
+.inner-head ul li:hover button {
+   background: palevioletred;
    cursor: pointer;
 }
 .inner-head ul li button:active{
@@ -23,6 +30,8 @@
 }
 
 .main .row {
+   padding-top: 40px;
+   position: relative;
    justify-content: center;
    flex-direction: column;
    width: 50%;
