@@ -21,6 +21,7 @@ start.addEventListener("click", function () {
   if (document.querySelector(".show") != null) {
     showKey.click();
   }
+  result.focus();
 });
 var check = document.getElementById("check");
 var opt = document.getElementById("opt");
@@ -63,21 +64,26 @@ function calcultion(num1, num2) {
 
   return ketQua;
 }
-
+var soundTrue = document.getElementById("soundTrue");
+var soundFalse = document.getElementById("soundFalse");
 check.addEventListener("click", function () {
   if (result.value == calcultion(num1, num2)) {
-    alert("Đúng");
+    soundTrue.play();
     num1.value = getRndInteger(1, 10);
     num2.value = getRndInteger(1, 10);
     result.value = "";
     check.style.background = "green";
     start.click();
   } else {
-    alert("Sai");
+    soundFalse.play();
     check.style.background = "red";
   }
 });
-
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    check.click();
+  }
+});
 showKey.addEventListener("click", function () {
   key.classList.toggle("show");
   key.innerHTML =
