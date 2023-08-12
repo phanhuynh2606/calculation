@@ -14,7 +14,7 @@ var start = document.getElementById("start");
 var num1 = document.getElementById("num1");
 var num2 = document.getElementById("num2");
 var result = document.getElementById("result");
-
+var arrow = document.getElementById("arrow");
 start.addEventListener("click", function () {
   num1.value = getRndInteger(1, 10);
   num2.value = getRndInteger(1, 10);
@@ -27,6 +27,11 @@ var check = document.getElementById("check");
 var opt = document.getElementById("opt");
 var key = document.getElementById("key");
 var showKey = document.getElementById("showKey");
+opt.addEventListener("change", () => {
+  if (document.querySelector(".show") != null) {
+    showKey.click();
+  }
+});
 function gcd(a, b) {
   if (b === 0) {
     return a;
@@ -84,8 +89,20 @@ document.addEventListener("keydown", function (event) {
     check.click();
   }
 });
+
 showKey.addEventListener("click", function () {
   key.classList.toggle("show");
+  if (document.querySelector(".show") != null) {
+    arrow.style.transform = "scale(-1,-1)";
+  } else {
+    arrow.style.transform = "scale(1)";
+  }
   key.innerHTML =
-    num1.value +" " + opt.value + " " + num2.value + " = " + calcultion(num1, num2);
+    num1.value +
+    " " +
+    opt.value +
+    " " +
+    num2.value +
+    " = " +
+    calcultion(num1, num2);
 });
