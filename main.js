@@ -1,12 +1,25 @@
 var lightOff = document.getElementById("light-off");
 var lightOn = document.getElementById("light-on");
+var bodyMode = document.querySelector(".changeMode");
 
+var changeMode = localStorage.getItem("mode");
+if (changeMode) {
+  bodyMode.classList.add(changeMode);
+}
 lightOff.addEventListener("click", function () {
-  document.body.style.background = "black";
+  if (changeMode == "") {
+    localStorage.setItem("mode", "dark");
+    changeMode = localStorage.getItem("mode");
+    bodyMode.classList.add(changeMode);
+  }
 });
 lightOn.addEventListener("click", function () {
-  document.body.style.background = "white";
+  // console.log(changeMode);
+  bodyMode.classList.remove(changeMode);
+  localStorage.setItem("mode", "");
+  changeMode = localStorage.getItem("mode");
 });
+
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }

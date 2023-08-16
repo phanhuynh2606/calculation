@@ -1,3 +1,7 @@
+.changeMode.dark {
+   background: black;
+}
+
 .inner-head ul {
    width: 100%;
    display: flex;
